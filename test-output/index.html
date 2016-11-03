@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\kannans\AppData\Local\Temp\testng-eclipse--1379338350\testng-customsuite.xml</span>
+                    <span>C:\Users\kannans\AppData\Local\Temp\testng-eclipse--194684452\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +102,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.git.testng.TestngSupport" hash-for-method="BasicTest1">BasicTest1</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.git.testng.TestNGExtend" hash-for-method="BasicTest1">BasicTest1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.git.testng.TestngSupport" hash-for-method="BasicTest2">BasicTest2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.git.testng.TestNGExtend" hash-for-method="BasicTest2">BasicTest2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.git.testng.TestngSupport" hash-for-method="BasicTest3">BasicTest3</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.git.testng.TestNGExtend" hash-for-method="BasicTest3">BasicTest3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="org.git.testng.TestNGExtend" hash-for-method="extendTest1">extendTest1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -130,7 +135,7 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">org.git.testng.TestngSupport</span>
+              <span class="class-name">org.git.testng.TestNGExtend</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -154,12 +159,19 @@
                   <span class="method-name">BasicTest3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="extendTest1">
+                  </a> <!-- extendTest1 -->
+                  <span class="method-name">extendTest1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kannans\AppData\Local\Temp\testng-eclipse--1379338350\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\kannans\AppData\Local\Temp\testng-eclipse--194684452\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -168,7 +180,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.git.testng.TestngSupport&quot;/&gt;
+      &lt;class name=&quot;org.git.testng.TestNGExtend&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -208,24 +220,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'BasicTest1')
-data.setCell(0, 2, 'org.git.testng.TestngSupport')
+data.setCell(0, 1, 'extendTest1')
+data.setCell(0, 2, 'org.git.testng.TestNGExtend')
 data.setCell(0, 3, 7);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'BasicTest2')
-data.setCell(1, 2, 'org.git.testng.TestngSupport')
+data.setCell(1, 1, 'BasicTest3')
+data.setCell(1, 2, 'org.git.testng.TestNGExtend')
 data.setCell(1, 3, 1);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'BasicTest3')
-data.setCell(2, 2, 'org.git.testng.TestngSupport')
-data.setCell(2, 3, 1);
+data.setCell(2, 1, 'BasicTest1')
+data.setCell(2, 2, 'org.git.testng.TestNGExtend')
+data.setCell(2, 3, 0);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'BasicTest2')
+data.setCell(3, 2, 'org.git.testng.TestNGExtend')
+data.setCell(3, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 ms</span>
+              <span class="suite-total-time">Total running time: 8 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -251,50 +267,62 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.git.testng.TestngSupport</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">org.git.testng.TestNGExtend</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">preTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">BasicTest1</span>
-                <span class="method-start">80 ms</span>
+                <span class="method-name">extendTest1</span>
+                <span class="method-start">84 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">preMethod</span>
-                <span class="method-start">80 ms</span>
+                <span class="method-start">84 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">postMethod</span>
-                <span class="method-start">156 ms</span>
+                <span class="method-start">93 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">preMethod</span>
+                <span class="method-start">93 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">BasicTest1</span>
+                <span class="method-start">94 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">postMethod</span>
+                <span class="method-start">95 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">preMethod</span>
+                <span class="method-start">95 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">BasicTest2</span>
-                <span class="method-start">157 ms</span>
+                <span class="method-start">96 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">preMethod</span>
-                <span class="method-start">157 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">postMethod</span>
-                <span class="method-start">158 ms</span>
+                <span class="method-start">97 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">BasicTest3</span>
-                <span class="method-start">159 ms</span>
+                <span class="method-start">98 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">preMethod</span>
-                <span class="method-start">159 ms</span>
+                <span class="method-start">98 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">postMethod</span>
-                <span class="method-start">161 ms</span>
+                <span class="method-start">99 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">postTest</span>
-                <span class="method-start">168 ms</span>
+                <span class="method-start">101 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
