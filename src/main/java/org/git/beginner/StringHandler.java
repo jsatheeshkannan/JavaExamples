@@ -26,13 +26,41 @@ public class StringHandler {
 
 	@Test
 	public void stringRegex1(){
-		str="generation";
+		String str2="generation";
 		String pattern1="generation";
-		String pat="gene";
-		System.out.println("Exact Matches of String "+Pattern.matches(pattern1, str));
-		Pattern p = Pattern.compile(pat);
+		String pattern2="off";
+		
+		System.out.println("Exact Matches of String "+Pattern.matches(pattern1, str2));
+		Pattern p = Pattern.compile(pattern2);
 		Matcher m = p.matcher(str);
-		System.out.println("Matches found in String "+m.find());
+		boolean found = false;
+		try{
+		while(m.find()){
+		System.out.println("Matches found in String "+m.group());
+		found = true;
+		}
+		if(!found){
+			System.out.println("No matches found");
+		}
+		//System.out.println("matches method:"+m.matches());
+		System.out.println("Start and End:"+m.start()+":"+m.end());
+		System.out.println("ReplaceFirstMethod:"+m.replaceFirst("cap"));
+		System.out.println(m.groupCount());
+		System.out.println("Replacing all by oof:"+m.replaceAll("oof"));
+		}catch(IllegalStateException e){
+			e.printStackTrace();
+		}
+		
+		String pincode="344999";
+		String patternpin="\\d{2}";
+		p  = Pattern.compile(patternpin);
+		m = p.matcher(pincode);
+		int count=0;
+		while(m.find()){
+		System.out.println(m.group());
+		count++;
+		}
+		System.out.println("No of Digit Matches found:"+count);
 		
 		//System.out.println(str.substring(10));
 	}
