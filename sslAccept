@@ -1,0 +1,83 @@
+public class NsxSeg {
+
+	private String url = "https://vsm1/api/2.0/vdn/config/segments";
+
+	public void nsxOper() {
+		System.out.println("nsx system operation begin...");
+		Examples e1 = new Examples();
+		try {
+			HostnameVerifier v1 = e1.getSSL();
+			HttpsURLConnection.setDefaultHostnameVerifier(v1);
+
+			URL u = new URL(url);
+			
+			HttpsURLConnection hurl = (HttpsURLConnection) u.openConnection();
+			hurl.setRequestMethod("GET");
+			hurl.setRequestProperty("Accept", "application/xml");
+			hurl.setRequestProperty("Content-type", "application/xml");
+			hurl.setRequestProperty("Authorization", "Basic YWRtaW46ZGVmYXVsdA==");
+			
+			System.out.println(hurl.getResponseCode());
+			BufferedReader br = new BufferedReader(new InputStreamReader(hurl.getInputStream()));
+			String a=null;
+			while((a=br.readLine()) != null){
+				System.out.println(a);
+			}
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		} catch (KeyManagementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
+#####SSL Accept all####
+public class SecurityPackage {
+	
+	
+	
+	public static class SkipSec  {
+		   TrustManager[] trustAllCertificates = new TrustManager[] {
+		       new X509TrustManager() {
+		           @Override
+		           public X509Certificate[] getAcceptedIssuers() {
+		               return null; // Not relevant.
+		           }
+		           @Override
+		           public void checkClientTrusted(X509Certificate[] certs, String authType) {
+		               // Do nothing. Just allow them all.
+		           }
+		           @Override
+		           public void checkServerTrusted(X509Certificate[] certs, String authType) {
+		               // Do nothing. Just allow them all.
+		           }
+		       }
+		   };
+
+		   public void skip() throws Exception {		    
+		   SSLContext sc1 = SSLContext.getInstance("SSLv3");
+		   
+		   
+		   
+		   sc1.init(null, trustAllCertificates, (new java.security.SecureRandom()));
+		   HttpsURLConnection.setDefaultSSLSocketFactory(sc1.getSocketFactory());
+		   }
+		   
+		   
+		   public static HostnameVerifier trustAllHostnames = new HostnameVerifier() {
+		       @Override
+		       public boolean verify(String hostname, SSLSession session) {
+		           return true; // Just allow them all.
+		       }
+		   };
+
+}}
