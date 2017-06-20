@@ -23,6 +23,10 @@ public class TestngSupport {
 		System.out.println("##BasicTest2 using Test Annotation##");
 	}
 	@Test
+	public void Bt(){
+		System.out.println("Bt block executing....");
+	}
+	@Test
 	public void BasicTest3(){
 		System.out.println("##BasicTest3 using Test Annotatio##");
 	}
